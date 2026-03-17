@@ -1,0 +1,222 @@
+/* ==============================================
+   print.css — Styles d'impression / export PDF
+   Chargé uniquement avec media="print"
+   ============================================== */
+
+@media print {
+
+  /* Force les couleurs à s'imprimer correctement */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ---- Thème clair pour l'impression ---- */
+  :root {
+    --color-bg:       #ffffff;
+    --color-surface:  #f4f4f8;
+    --color-surface2: #eaeaf0;
+    --color-border:   #d0d0e0;
+    --color-text:     #111118;
+    --color-muted:    #555566;
+    --color-accent:   #007a62;
+    --color-accent2:  #b01050;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 12pt;
+  }
+
+  /* ---- Masquer les éléments inutiles à l'impression ---- */
+  .navbar,
+  .btn-print,
+  .hero__cta,
+  .bg-grid,
+  .bg-scanline,
+  .contact-form,
+  .nav-toggle {
+    display: none !important;
+  }
+
+  /* ---- Mise en page générale ---- */
+  .section {
+    padding-block: 1.5rem;
+    page-break-inside: avoid;
+  }
+
+  .hero {
+    min-height: unset;
+    padding-top: 1.5rem;
+    page-break-after: always;
+  }
+
+  .hero__inner {
+    padding-top: 0;
+  }
+
+  /* ---- Typography print ---- */
+  .hero__name {
+    font-size: 2.8rem;
+    color: #111 !important;
+  }
+
+  .hero__subtitle {
+    font-size: 10pt;
+    color: #555 !important;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+    color: #111 !important;
+  }
+
+  .section__label {
+    color: var(--color-accent) !important;
+  }
+
+  /* ---- Stats ---- */
+  .hero__stats {
+    border-top-color: #ccc !important;
+    gap: 2rem;
+  }
+
+  .stat__num {
+    font-size: 1.8rem;
+    color: var(--color-accent) !important;
+  }
+
+  .stat__label {
+    color: #777 !important;
+  }
+
+  /* ---- About ---- */
+  .about__text p {
+    color: #444 !important;
+  }
+
+  .info-row {
+    border-bottom-color: #ddd !important;
+  }
+
+  .info-row__key {
+    color: var(--color-accent) !important;
+  }
+
+  .info-row__val {
+    color: #222 !important;
+  }
+
+  /* ---- Skill cards ---- */
+  .skill-card {
+    border: 1px solid #ccc !important;
+    background: #f9f9fb !important;
+    box-shadow: none !important;
+  }
+
+  .skill-card::before {
+    background: var(--color-accent) !important;
+    transform: scaleY(1) !important;
+  }
+
+  .skill-card__cat {
+    color: var(--color-accent) !important;
+  }
+
+  .skill-card__name {
+    color: #111 !important;
+  }
+
+  /* ---- Tags ---- */
+  .tag {
+    background: #eee !important;
+    color: #555 !important;
+    border-color: #bbb !important;
+  }
+
+  .tag--hot {
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+
+  /* ---- Project cards ---- */
+  .project-card {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    transform: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .project-card__thumb {
+    background: #eee !important;
+  }
+
+  .project-card__thumb::after {
+    background: linear-gradient(to bottom, transparent 40%, #fff) !important;
+  }
+
+  .project-card__type {
+    color: var(--color-accent2) !important;
+  }
+
+  .project-card__title {
+    color: #111 !important;
+  }
+
+  .project-card__desc {
+    color: #444 !important;
+  }
+
+  .link-arrow {
+    color: var(--color-accent) !important;
+    border-bottom-color: var(--color-accent) !important;
+  }
+
+  /* ---- Contact ---- */
+  .contact__intro {
+    color: #444 !important;
+  }
+
+  .contact-link {
+    border-color: #ddd !important;
+    color: #111 !important;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
+    border-top-color: #ccc !important;
+    color: #666 !important;
+    font-size: 9pt;
+  }
+
+  .footer__tagline {
+    color: var(--color-accent) !important;
+  }
+
+  /* ---- Grilles : conserver la mise en page 2 colonnes ---- */
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ---- Liens : afficher l'URL ---- */
+  .contact-link[href]::after {
+    display: none; /* URLs déjà visibles dans le texte */
+  }
+
+  /* ---- Sauts de page ---- */
+  #skills   { page-break-before: always; }
+  #projects { page-break-before: always; }
+  #contact  { page-break-before: always; }
+}

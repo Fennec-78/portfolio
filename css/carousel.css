@@ -1,0 +1,155 @@
+/* ==============================================
+   carousel.css — Carousel d'images dans les project cards
+   ============================================== */
+
+/* ---- Conteneur ---- */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--color-surface2);
+  flex-shrink: 0;
+}
+
+/* ---- Track (liste des slides) ---- */
+.carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* ---- Slide individuel ---- */
+.carousel__slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Slide emoji (fallback sans image) */
+.carousel__slide--emoji {
+  background: var(--color-surface2);
+  font-size: 3.5rem;
+}
+
+.carousel__slide--emoji::before {
+  content: attr(data-emoji);
+}
+
+/* Fondu vers le bas (effet depth) */
+.carousel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, var(--color-bg) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---- Boutons prev / next ---- */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0;
+  backdrop-filter: blur(4px);
+}
+
+.carousel:hover .carousel__btn {
+  opacity: 1;
+}
+
+.carousel__btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.carousel__btn--prev { left: 8px; }
+.carousel__btn--next { right: 8px; }
+
+/* Désactivé (premier/dernier slide) */
+.carousel__btn[disabled] {
+  opacity: 0.2 !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ---- Dots ---- */
+.carousel__dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.carousel__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.carousel__dot.active {
+  background: var(--color-accent);
+  transform: scale(1.3);
+}
+
+/* ---- Pas de contrôles si 1 seul slide ---- */
+.carousel[data-single] .carousel__btn,
+.carousel[data-single] .carousel__dots {
+  display: none;
+}
+
+/* ---- Print : afficher seulement le 1er slide ---- */
+@media print {
+  .carousel {
+    height: 160px;
+    overflow: hidden;
+  }
+  .carousel__track {
+    transform: none !important;
+  }
+  .carousel__slide:not(:first-child) {
+    display: none;
+  }
+  .carousel__btn,
+  .carousel__dots {
+    display: none !important;
+  }
+  .carousel::after {
+    display: none;
+  }
+}

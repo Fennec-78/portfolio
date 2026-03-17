@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Ilyes Zaidi — Étudiant en informatique et développement de jeux vidéo" />
+  <title>Portfolio - Ilyes Zaidi</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+</head>
+<body>
+
+  <!-- Arrière-plans décoratifs -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-scanline" aria-hidden="true"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo__slash">//</span> ILYES.ZAIDI
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">À propos</a></li>
+      <li><a href="#skills" class="nav-link">Compétences</a></li>
+      <li><a href="#projects" class="nav-link">Projets</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="CV_Zaidi_Ilyes.pdf" download class="cv-btn">
+      ⬇ Télécharger CV
+    </a>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+      <div class="hero__inner container">
+        <p class="hero__tag animate-fadeup" style="--delay: 0.1s">// Portfolio 2026</p>
+        <h1 class="hero__name animate-fadeup" style="--delay: 0.3s">
+          Ilyes<br>
+          <span class="text-accent">Zaidi</span><span class="text-accent2">.</span>
+        </h1>
+        <p class="hero__subtitle animate-fadeup" style="--delay: 0.5s">
+          <strong>Développeur</strong> · Jeux Vidéo &amp; Informatique<br>
+          BUT Informatique @ IUT d'Orsay · Double cursus Baccalauréat Jeux Vidéo @ UQAC,Québec
+        </p>
+        <div class="hero__cta animate-fadeup" style="--delay: 0.7s">
+          <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn--ghost">Me contacter</a>
+        </div>
+        <div class="hero__stats animate-fadeup" style="--delay: 0.9s">
+          <div class="stat">
+            <span class="stat__num" data-count="3+">0</span><span class="stat__num">+</span>
+            <p class="stat__label">Années de code</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="3">0</span>
+            <p class="stat__label">Expériences pro</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="2">0</span>
+            <p class="stat__label">Formations</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="7">0</span><span class="stat__num">+</span>
+            <p class="stat__label">Langages maîtrisés</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section section--surface">
+      <div class="container">
+        <p class="section__label">// 01 — Qui suis-je ?</p>
+        <h2 class="section__title">À propos</h2>
+        <div class="about-grid">
+          <div class="about__text">
+            <p>Étudiant en dernière année de <strong>Bachelor Universitaire de Technologie en Informatique</strong> à l'IUT d'Orsay (Paris-Saclay), je suis également en double cursus à l'<strong>UQAC au Québec</strong> avec une spécialisation en développement de jeux vidéo.</p>
+            <p>Rigoureux et autonome, je maîtrise la conception logicielle et le développement de systèmes complexes. Mon stage chez <strong>Kebchi (Paris)</strong> m'a permis de travailler sur de l'automatisation Python, du data processing et de l'optimisation CRM en conditions réelles.</p>
+            <p>Je suis à la recherche d'une opportunité pour mettre mes compétences au service de projets ambitieux, que ce soit en <strong>game development</strong>, en développement logiciel ou en systèmes complexes.</p>
+          </div>
+          <div class="about__info">
+            <div class="info-row">
+              <span class="info-row__key">Formation 1</span>
+              <span class="info-row__val">BUT Informatique — IUT d'Orsay, Paris-Saclay (2023–2026)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row__key">Formation 2</span>
+              <span class="info-row__val">Baccalauréat Jeux Vidéo — UQAC, Saguenay, Canada (2025–2026)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-row__key">Langues</span>
+              <span class="info-row__val">Français (natif) · Anglais (scolaire)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="section__label">// 02 — Ce que je sais faire</p>
+        <h2 class="section__title">Compétences</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-card__icon">🎮</div>
+            <p class="skill-card__cat">Game Dev</p>
+            <h3 class="skill-card__name">Moteurs de jeu</h3>
+            <div class="tags">
+              <span class="tag tag--hot">Unity</span>
+              <span class="tag tag--hot">C#</span>
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">Game Design (RGD)</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">💻</div>
+            <p class="skill-card__cat">Programmation</p>
+            <h3 class="skill-card__name">Langages</h3>
+            <div class="tags">
+              <span class="tag tag--hot">C / C++</span>
+              <span class="tag tag--hot">Python</span>
+              <span class="tag tag--hot">Java</span>
+              <span class="tag">Kotlin</span>
+
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">🧠</div>
+            <p class="skill-card__cat">IA & Systèmes</p>
+            <h3 class="skill-card__name">Game AI & Réseau</h3>
+            <div class="tags">
+              <span class="tag tag--hot">Agents autonomes</span>
+              <span class="tag tag--hot">Multijoueur en ligne</span>
+              <span class="tag">Systèmes de décision</span>
+              <span class="tag">Client-serveur</span>
+
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">🗄️</div>
+            <p class="skill-card__cat">Data & Web</p>
+            <h3 class="skill-card__name">Bases de données & Web</h3>
+            <div class="tags">
+              <span class="tag tag--hot">SQL / MySQL</span>
+              <span class="tag tag--hot">Scraping Python</span>
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">CRM</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">📊</div>
+            <p class="skill-card__cat">Data Processing</p>
+            <h3 class="skill-card__name">Automatisation</h3>
+            <div class="tags">
+              <span class="tag tag--hot">Scripts Python</span>
+              <span class="tag">Nettoyage données</span>
+              <span class="tag">Prospection ciblée</span>
+              <span class="tag">Vérification intégrité</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card__icon">🔧</div>
+            <p class="skill-card__cat">Outils</p>
+            <h3 class="skill-card__name">DevOps &amp; Workflow</h3>
+            <div class="tags">
+              <span class="tag tag--hot">Git / GitHub</span>
+              <span class="tag">Agile / Scrum</span>
+              <span class="tag">Conception logicielle</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section section--surface">
+      <div class="container">
+        <p class="section__label">// 03 — Ce que j'ai créé</p>
+        <h2 class="section__title">Projets</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide">
+                  <img src="images/snake/game.png" alt="Snake — gameplay" />
+                </div>
+                <div class="carousel__slide">
+                  <img src="images/snake/gameOver.png" alt="Snake — game over" />
+                </div>
+                <div class="carousel__slide">
+                  <img src="images/snake/menu.png" alt="Snake — menu" />
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Image précédente">&#8592;</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Image suivante">&#8594;</button>
+              <div class="carousel__dots"></div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__type">TP1 · Jeu Vidéo · Groupe · UQAC — Jan 2026</p>
+              <h3 class="project-card__title">Snake</h3>
+              <p class="project-card__desc">Réalisation en groupe du classique Snake sur Unity 6, enrichi de bonus et malus influençant la vitesse du serpent, ainsi qu'un leaderboard persistant sauvegardant les meilleurs scores entre les sessions.</p>
+              <div class="tags">
+                <span class="tag tag--hot">Unity</span>
+                <span class="tag tag--hot">C#</span>
+                <span class="tag">Leaderboard</span>
+                <span class="tag">Travail de groupe</span>
+                <span class="tag">UQAC</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/BASile15/Snake" target="_blank" class="link-arrow">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card__img" src="images/endless-runner.svg" alt="Endless Runner preview" />
+            <div class="project-card__body">
+              <p class="project-card__type">TP2 · Jeu Vidéo · UQAC 2026</p>
+              <h3 class="project-card__title">Endless Runner</h3>
+              <p class="project-card__desc">Travail Pratique 2 du cours de réalisation d'un jeu vidéo à l'UQAC. Un runner infini avec obstacles générés procéduralement, système de score et montée en difficulté progressive.</p>
+              <div class="tags">
+                <span class="tag tag--hot">Unity</span>
+                <span class="tag tag--hot">C#</span>
+                <span class="tag">Procédural</span>
+                <span class="tag">UQAC</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/BASile15/EndlessRunner" target="_blank" class="link-arrow">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb" data-emoji="🐍"></div>
+            <div class="project-card__body">
+              <p class="project-card__type">Stage Professionnel · Kebchi, Paris — Mai–Juil 2025</p>
+              <h3 class="project-card__title">Automatisation & Data Processing</h3>
+              <p class="project-card__desc">Scripts Python pour la collecte automatisée de données et la prospection ciblée. Nettoyage de données complexes et enrichissement CRM avec vérification d'intégrité.</p>
+              <div class="tags">
+                <span class="tag tag--hot">Python</span>
+                <span class="tag tag--hot">Scraping</span>
+                <span class="tag">Data Processing</span>
+                <span class="tag">CRM</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="section__label">// 04 — Me joindre</p>
+        <h2 class="section__title">Contact</h2>
+        <div class="contact-solo">
+
+          <div class="contact__info">
+            <p class="contact__intro">Étudiant en BUT Informatique et développement de jeux vidéo à l'UQAC. N'hésite pas à me contacter !</p>
+            <nav class="contact-links" aria-label="Liens de contact">
+              <a href="mailto:ilyes.zaidi.pro@gmail.com" class="contact-link">
+                <span class="contact-link__icon">✉</span>
+                <span>ilyes.zaidi.pro@gmail.com</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ilyes-zaidi-499931293/" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link__icon">in</span>
+                <span>linkedin.com/in/ilyes-zaidi</span>
+              </a>
+              <a href="https://github.com/Fennec-78" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link__icon">⌥</span>
+                <span>github.com/Fennec-78</span>
+              </a>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span>© 2026 - Ilyes Zaidi</span>
+    <span>Conçu et développé par moi-même</span>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>

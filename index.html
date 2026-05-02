@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="css/carousel.css" />
 </head>
 <body>
 
@@ -39,9 +39,9 @@
       <li><a href="#projects" class="nav-link">Projets</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <button class="btn-print" onclick="window.print()" aria-label="Imprimer ou exporter en PDF">
-      ⊡ Imprimer / PDF
-    </button>
+    <a href="CV_Zaidi_Ilyes.pdf" download class="cv-btn">
+      ⬇ Télécharger CV
+    </a>
   </nav>
 
   <main>
@@ -64,7 +64,7 @@
         </div>
         <div class="hero__stats animate-fadeup" style="--delay: 0.9s">
           <div class="stat">
-            <span class="stat__num" data-count="3">0</span><span class="stat__num">+</span>
+            <span class="stat__num" data-count="3+">0</span><span class="stat__num">+</span>
             <p class="stat__label">Années de code</p>
           </div>
           <div class="stat">
@@ -128,7 +128,6 @@
               <span class="tag tag--hot">C#</span>
               <span class="tag">Unreal Engine</span>
               <span class="tag">Game Design (RGD)</span>
-              <span class="tag">UI/UX jeu</span>
             </div>
           </div>
 
@@ -140,9 +139,8 @@
               <span class="tag tag--hot">C / C++</span>
               <span class="tag tag--hot">Python</span>
               <span class="tag tag--hot">Java</span>
-              <span class="tag">JavaScript</span>
               <span class="tag">Kotlin</span>
-              <span class="tag">PHP</span>
+
             </div>
           </div>
 
@@ -152,9 +150,10 @@
             <h3 class="skill-card__name">Game AI & Réseau</h3>
             <div class="tags">
               <span class="tag tag--hot">Agents autonomes</span>
-              <span class="tag tag--hot">Systèmes de décision</span>
+              <span class="tag tag--hot">Multijoueur en ligne</span>
+              <span class="tag">Systèmes de décision</span>
               <span class="tag">Client-serveur</span>
-              <span class="tag">Multijoueur en ligne</span>
+
             </div>
           </div>
 
@@ -164,8 +163,9 @@
             <h3 class="skill-card__name">Bases de données & Web</h3>
             <div class="tags">
               <span class="tag tag--hot">SQL / MySQL</span>
+              <span class="tag tag--hot">Scraping Python</span>
               <span class="tag">HTML / CSS</span>
-              <span class="tag">Scraping Python</span>
+              <span class="tag">PHP</span>
               <span class="tag">CRM</span>
             </div>
           </div>
@@ -205,54 +205,53 @@
         <div class="projects-grid">
 
           <article class="project-card">
-            <div class="project-card__thumb" data-emoji="🤖"></div>
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide">
+                  <img src="images/snake/game.png" alt="Snake — gameplay" />
+                </div>
+                <div class="carousel__slide">
+                  <img src="images/snake/gameOver.png" alt="Snake — game over" />
+                </div>
+                <div class="carousel__slide">
+                  <img src="images/snake/menu.png" alt="Snake — menu" />
+                </div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Image précédente">&#8592;</button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Image suivante">&#8594;</button>
+              <div class="carousel__dots"></div>
+            </div>
             <div class="project-card__body">
-              <p class="project-card__type">Expérience Scolaire · UQAC — Jan 2025–Avr 2026</p>
-              <h3 class="project-card__title">IA pour Jeux Vidéo</h3>
-              <p class="project-card__desc">Développement de comportements d'agents autonomes et de systèmes de décision pour le jeu vidéo — IA réactive et intentionnelle en environnement temps réel.</p>
+              <p class="project-card__type">TP1 · Jeu Vidéo · Groupe · UQAC — Jan 2026</p>
+              <h3 class="project-card__title">Snake</h3>
+              <p class="project-card__desc">Réalisation en groupe du classique Snake sur Unity 6, enrichi de bonus et malus influençant la vitesse du serpent, ainsi qu'un leaderboard persistant sauvegardant les meilleurs scores entre les sessions.</p>
               <div class="tags">
-                <span class="tag tag--hot">IA comportementale</span>
-                <span class="tag tag--hot">Agents autonomes</span>
-                <span class="tag">Systèmes de décision</span>
+                <span class="tag tag--hot">Unity</span>
+                <span class="tag tag--hot">C#</span>
+                <span class="tag">Leaderboard</span>
+                <span class="tag">Travail de groupe</span>
                 <span class="tag">UQAC</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="link-arrow">GitHub →</a>
+                <a href="https://github.com/BASile15/Snake" target="_blank" class="link-arrow">GitHub →</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-card__thumb" data-emoji="🌐"></div>
+            <img class="project-card__img" src="images/endless-runner.svg" alt="Endless Runner preview" />
             <div class="project-card__body">
-              <p class="project-card__type">Expérience Scolaire · UQAC — Jan 2025–Avr 2026</p>
-              <h3 class="project-card__title">Jeu Multijoueur en Ligne</h3>
-              <p class="project-card__desc">Mise en place d'une architecture client-serveur complète pour un jeu multijoueur en ligne. Gestion de la synchronisation réseau et des états de jeu.</p>
+              <p class="project-card__type">TP2 · Jeu Vidéo · UQAC 2026</p>
+              <h3 class="project-card__title">Endless Runner</h3>
+              <p class="project-card__desc">Travail Pratique 2 du cours de réalisation d'un jeu vidéo à l'UQAC. Un runner infini avec obstacles générés procéduralement, système de score et montée en difficulté progressive.</p>
               <div class="tags">
-                <span class="tag tag--hot">Réseau client-serveur</span>
-                <span class="tag tag--hot">Multijoueur</span>
-                <span class="tag">Architecture système</span>
+                <span class="tag tag--hot">Unity</span>
+                <span class="tag tag--hot">C#</span>
+                <span class="tag">Procédural</span>
+                <span class="tag">UQAC</span>
               </div>
               <div class="project-card__links">
-                <a href="#" class="link-arrow">GitHub →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__thumb" data-emoji="🎮"></div>
-            <div class="project-card__body">
-              <p class="project-card__type">Expérience Scolaire · UQAC — Jan 2025–Avr 2026</p>
-              <h3 class="project-card__title">Game Design & UI/UX</h3>
-              <p class="project-card__desc">Conception du gameplay via le Rational Game Design (RGD) — création de boucles de jeu, équilibrage de mécaniques et optimisation de l'expérience utilisateur.</p>
-              <div class="tags">
-                <span class="tag tag--hot">RGD</span>
-                <span class="tag tag--hot">Game Design</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">Boucles de jeu</span>
-              </div>
-              <div class="project-card__links">
-                <a href="#" class="link-arrow">Démo →</a>
+                <a href="https://github.com/BASile15/EndlessRunner" target="_blank" class="link-arrow">GitHub →</a>
               </div>
             </div>
           </article>
@@ -269,9 +268,6 @@
                 <span class="tag">Data Processing</span>
                 <span class="tag">CRM</span>
               </div>
-              <div class="project-card__links">
-                <a href="#" class="link-arrow">GitHub →</a>
-              </div>
             </div>
           </article>
 
@@ -282,7 +278,7 @@
     <!-- ========== CONTACT ========== -->
     <section id="contact" class="section">
       <div class="container">
-        <p class="section__label">// 04 — Travaillons ensemble</p>
+        <p class="section__label">// 04 — Me joindre</p>
         <h2 class="section__title">Contact</h2>
         <div class="contact-solo">
 
@@ -319,7 +315,6 @@
   <!-- JS -->
   <script src="js/nav.js"></script>
   <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-
+  <script src="js/carousel.js"></script>
 </body>
 </html>

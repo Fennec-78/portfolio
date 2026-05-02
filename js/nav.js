@@ -1,5 +1,5 @@
 /* ==============================================
-   nav.js — Navigation : sticky, active, hamburger
+   nav.js — Navigation : sticky, active
    ============================================== */
 
 (function () {
@@ -32,14 +32,12 @@
     });
   }
 
-  /* ---- Menu hamburger (mobile) ---- */
   navToggle.addEventListener('click', function () {
     const isOpen = navLinks.classList.toggle('open');
     navToggle.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', isOpen);
   });
 
-  /* Fermer le menu au clic sur un lien */
   allLinks.forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
@@ -48,8 +46,7 @@
     });
   });
 
-  /* ---- Écouter le scroll ---- */
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // initialisation
+  onScroll();
 
 })();

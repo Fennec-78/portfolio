@@ -2,7 +2,6 @@
    layout.css — Structure, grilles, sections
    ============================================== */
 
-/* ---- Arrière-plans décoratifs ---- */
 .bg-grid {
   position: fixed;
   inset: 0;
@@ -29,14 +28,12 @@
   animation: scanMove 14s linear infinite;
 }
 
-/* ---- Conteneur ---- */
 .container {
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--container-pad);
 }
 
-/* ---- Sections génériques ---- */
 .section {
   position: relative;
   z-index: 1;
@@ -64,7 +61,6 @@
   line-height: 1.05;
 }
 
-/* ---- Hero ---- */
 .hero {
   position: relative;
   z-index: 1;
@@ -139,7 +135,6 @@
   margin-top: 0.3rem;
 }
 
-/* ---- About ---- */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -158,21 +153,18 @@
   color: var(--color-text);
 }
 
-/* ---- Skills ---- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
 
-/* ---- Projects ---- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
-/* ---- Contact ---- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -187,7 +179,6 @@
   font-size: var(--text-base);
 }
 
-/* ---- Footer ---- */
 .footer {
   position: relative;
   z-index: 1;
@@ -207,7 +198,6 @@
   color: var(--color-accent);
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 900px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);

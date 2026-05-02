@@ -1,7 +1,7 @@
 /* ==============================================
    components.css — Composants UI réutilisables
    ============================================== */
-
+   
 /* ---- Helpers ---- */
 .text-accent  { color: var(--color-accent); }
 .text-accent2 { color: var(--color-accent2); }
@@ -73,7 +73,27 @@
   width: 100%;
 }
 
-/* Hamburger mobile */
+.cv-btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+ 
+.cv-btn:hover {
+  background: transparent;
+  color: var(--color-accent);
+  outline: 1px solid var(--color-accent);
+}
+ 
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -392,68 +412,7 @@
   flex-shrink: 0;
 }
 
-/* ---- Formulaire de contact ---- */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.contact-form label {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--color-accent);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  padding: 0.8rem 1rem;
-  outline: none;
-  resize: vertical;
-  transition: border-color var(--transition-fast);
-  width: 100%;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--color-accent);
-}
-
-.contact-form input.error,
-.contact-form textarea.error {
-  border-color: var(--color-accent2);
-}
-
-.form-error {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--color-accent2);
-  min-height: 1em;
-}
-
-.form-success {
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  color: var(--color-accent);
-  padding: var(--space-sm) var(--space-md);
-  border: 1px solid var(--color-accent);
-  background: rgba(0, 245, 196, 0.05);
-}
-
-/* ---- Contact solo (sans formulaire) ---- */
+/* ---- Contact solo ---- */
 .contact-solo {
   max-width: 600px;
 }
@@ -461,4 +420,3 @@
 .contact-solo .contact-links {
   margin-top: var(--space-md);
 }
-

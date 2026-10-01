@@ -6,6 +6,18 @@
 .text-accent  { color: var(--color-accent); }
 .text-accent2 { color: var(--color-accent2); }
 
+/* ---- Placeholder à compléter ---- */
+.todo {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent2);
+  border: 1px dashed var(--color-accent2);
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.04em;
+}
+
 /* ---- Navbar ---- */
 .navbar {
   position: fixed;

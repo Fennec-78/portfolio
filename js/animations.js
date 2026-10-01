@@ -7,7 +7,7 @@
 
   /* ---- 1. Reveal au scroll ---- */
   const revealTargets = document.querySelectorAll(
-    '.skill-card, .project-card, .about-grid, .contact-grid, .section__title, .info-row'
+    '.skill-card, .project-card, .about-grid, .contact-grid, .section__title, .info-row, .timeline-item'
   );
 
   revealTargets.forEach(el => el.classList.add('reveal'));
